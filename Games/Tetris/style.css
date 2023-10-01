@@ -1,0 +1,235 @@
+body{
+    margin: 0;
+    font-family: 'Geologica', sans-serif;
+}
+header{
+    width: 100%;
+    height: 100%;
+    background: whitesmoke;
+    color: #495057;
+    font-size: 1.3em;
+}
+.header_content{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.header_pic img{
+    height: 100px;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+li{
+    padding-left: 30px;
+    margin: 0;
+    padding-top: 35px;
+    position: relative;
+}
+li img{
+    width: 18px;
+    padding-right: 5px;
+}
+li::before{
+    content: "";
+    height: 2px;
+    background-color: #ec172c;
+    width: 0;
+    display: block;
+    position: absolute;
+    left: 30px;
+    bottom: 45px;
+    transition: width 0.5s;
+}
+li:hover::before{
+    width: 80%;
+}
+a{
+    text-decoration: none;
+    color: #495057;
+}
+.dropdown{
+    width: 50%;
+    visibility: hidden;
+    position: absolute;
+    margin-left: 25%;
+    display: flex;
+    background: whitesmoke;
+    color: #495057;
+    border-radius: 0 0 15px 15px;
+}
+.dropdown_img{
+    width: 200px;
+    border-radius: 20px;
+}
+.left{
+    flex: 1;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    margin-right: 15px;
+    padding-top: 40px;
+}
+.right{
+    flex: 2;
+    display: flex;
+}
+.game {
+    flex: 1;
+    font-size: larger;
+    text-align: center;
+}
+.game:hover{
+    text-decoration: underline;
+}
+.game:hover::after{
+    content: url("Images/play.png");
+    position: absolute;
+    bottom: -3px;
+    padding-left: 2px;
+}
+.play_sign{
+    width: 16px;
+    visibility: hidden;
+}
+.dropdown_img:hover{
+    transition: 0.5s;
+    transform: scale(1.05);
+}
+.p_left{
+    padding-left: 15px;
+    font-size: larger;
+}
+.p_left:hover{
+    text-decoration: underline;
+}
+/*Стиль фразы*/
+.phrase_div{
+    width: 100%;
+    height: 100%;
+    background: #bbbbbb;
+}
+.phrase{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 15px 0 15px;
+}
+.phrase1{
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 900;
+    font-family: 'Geologica', sans-serif;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    min-height: 80vh;
+    margin: 0 auto;
+    border: 1px solid black;
+    background-color: #cecdcd;
+}
+.header{
+    width: 100%;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between
+}
+.header .score{
+    font-size: 20px;
+    font-weight: bold;
+}
+hr{
+    width: 100%;
+}
+.left{
+    flex: 1;
+    padding-top: 20px;
+}
+.right{
+    flex: 2;
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.play_field{
+    /*width: 512px;*/
+    margin: 0 auto;
+    padding-top: 20px;
+    flex:3
+    /*border: 1px solid black;*/
+    /*border-radius: 2px;*/
+    /*background-color: black;*/
+}
+.row{
+    display: flex;
+    justify-content: center;
+}
+.cell{
+    border: 1px solid #7c7c7c;
+    border-radius: 2px;
+    background-color: black;
+    height: 30px;
+    width: 30px;
+}
+.start{
+    width: 60%;
+    height: 5vh;
+    border-radius: 30px;
+    background-color: black;
+    color: #cecdcd;
+    font-weight: bold;
+    font-size: 1em;
+}
+.start:hover{
+    background: linear-gradient(to bottom, black 60%, grey);
+}
+.fig1, .blue{
+    background: linear-gradient(135deg, #0a58ca, white);
+
+}
+.fig2, .light_blue{
+    background: linear-gradient(135deg, #39b9ef, white);
+}
+.fig3, .yellow{
+    background: linear-gradient(135deg, #ffc107, white);
+}
+.fig4, .orange{
+    background: linear-gradient(135deg, #fd7e14, white);
+}
+.fig5, .red{
+    background: linear-gradient(135deg, #ec172c, white);
+}
+.fig6, .violet{
+    background: linear-gradient(135deg, #6f42c1, white);
+}
+.fig7, .green{
+    background: linear-gradient(135deg, #26b43e, white);
+}
+
+.gameOver{
+    position: absolute;
+    top: 40%;
+    left: 41%;
+    border: 1px solid white;
+    padding: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: black;
+    visibility: hidden;
+}

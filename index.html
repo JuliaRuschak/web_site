@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Games</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;900&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header_content">
+            <div class="header_pic">
+                <img src="Images/logo.jpg" alt="logo">
+            </div>
+            <ul class="menu">
+                <li><img src="Images/home.png" alt="img"><a class="link" href="index.html">Home</a></li>
+                <li class="dropdown_js"><img src="Images/puzzle.png" alt="img"><a class="link" href="#">Games</a></li>
+                <li><img src="Images/pen.png" alt="img"><a class="link" href="CV/CV.html">CV and Blog</a></li>
+                <li><img src="Images/email.png" alt="img"><a class="link" href="#">Contacts</a></li>
+            </ul>
+        </div>
+
+    </header>
+    <div class="dropdown">
+        <div class="left">
+            <p class="p_left"><a class="link" href="#">All games</a></p>
+           <p class="p_left"><a class="link" href="#">Solo games</a></p>
+            <p class="p_left"><a class="link" href="#">Games for two</a></p>
+        </div>
+        <div class="right">
+            <div class="game">
+                <a class="link" href="Games/Snake/index.html">
+                    <img class="dropdown_img" src="Images/2.jpg" alt="snake">Snake
+                </a>
+            </div>
+            <div class="game">
+                <a class="link" href="Games/Minesweeper/index.html">
+                    <img class="dropdown_img" src="Images/4.png" alt="Minesweeper">Minesweeper
+                </a>
+            </div>
+            <div class="game">
+                <a class="link" href="Games/Tetris/index.html">
+                    <img class="dropdown_img" src="Images/3.jpg" alt="tetris">Tetris
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="phrase_div">
+        <div class="phrase">
+            <div class="phrase1">Work </div>
+            <div class="phrase2">hard </div>
+            <div class="line"></div>
+            <div class="phrase1">Play </div>
+            <div class="phrase2">harder</div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="wrapper">
+            <div class="pointer" data-type="left">&lsaquo;</div>
+            <div class="carousel">
+                <div class="link_carousel"><a class="link_carousel_js" href="#"><img class="carousel_img" src="Images/1.jpg" alt="chess"></a></div>
+                <div class="link_carousel"><a class="link_carousel link_carousel_js" href="Games/Snake/index.html"><img class="carousel_img" src="Images/2.png" alt="snake"></a></div>
+                <div class="link_carousel"><a class="link_carousel link_carousel_js" href="Games/Tetris/index.html"><img class="carousel_img" src="Images/3.jpg" alt="tetris"></a></div>
+<!--                <div class="link_carousel"><a class="link_carousel link_carousel_js" href="Games/Minesweeper/index.html"><img class="carousel_img" src="Images/4.png" alt="minesweeper"></a></div>-->
+            </div>
+            <div class="pointer" data-type="right" >&rsaquo;</div>
+        </div>
+    </div>
+
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

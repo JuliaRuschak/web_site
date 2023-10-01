@@ -1,0 +1,244 @@
+body{
+    margin: 0;
+    font-family: 'Geologica', sans-serif;
+}
+header{
+    width: 100%;
+    height: 100%;
+    background: whitesmoke;
+    color: #495057;
+    font-size: 1.3em;
+}
+.header_content{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.header_pic img{
+    height: 100px;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+li{
+    padding-left: 30px;
+    margin: 0;
+    padding-top: 35px;
+    position: relative;
+}
+li img{
+    width: 18px;
+    padding-right: 5px;
+}
+li::before{
+    content: "";
+    height: 2px;
+    background-color: #ec172c;
+    width: 0;
+    display: block;
+    position: absolute;
+    left: 30px;
+    bottom: 45px;
+    transition: width 0.5s;
+}
+li:hover::before{
+    width: 80%;
+}
+a{
+    text-decoration: none;
+    color: #495057;
+}
+.dropdown{
+    width: 50%;
+    visibility: hidden;
+    position: absolute;
+    margin-left: 25%;
+    display: flex;
+    background: whitesmoke;
+    color: #495057;
+    border-radius: 0 0 15px 15px;
+    z-index: 1;
+}
+.dropdown_img{
+    width: 200px;
+    border-radius: 20px;
+}
+.left{
+    flex: 1;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    margin-right: 15px;
+    padding-top: 40px;
+}
+.right{
+    flex: 2;
+    display: flex;
+}
+.game {
+    flex: 1;
+    font-size: larger;
+    text-align: center;
+}
+.game:hover{
+    text-decoration: underline;
+}
+.game:hover::after{
+    content: url("Images/play.png");
+    position: absolute;
+    bottom: -3px;
+    padding-left: 2px;
+}
+.play_sign{
+    width: 16px;
+    visibility: hidden;
+}
+.dropdown_img:hover{
+    transition: 0.5s;
+    transform: scale(1.05);
+}
+.p_left{
+    padding-left: 15px;
+    font-size: larger;
+}
+.p_left:hover{
+    text-decoration: underline;
+}
+/*Стиль фразы*/
+.phrase_div{
+    width: 100%;
+    height: 100%;
+    background: #bbbbbb;
+}
+.phrase{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 15px 0 15px;
+}
+.phrase1{
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 900;
+    font-family: 'Geologica', sans-serif;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.container{
+    width: 40%;
+    margin: 0 auto;
+}
+.wrap_container{
+    margin-top: 1%;
+    display: flex;
+    position: relative;
+    z-index: 0;
+}
+.start_button{
+    display: inline-block;
+    position: absolute;
+    left: 73%;
+}
+.start{
+    padding: 10px;
+    font-size: x-large;
+    font-weight: bold;
+    background: rgba(243, 233, 123, 0.78);
+    color: #10643e;
+    border-radius: 15px;
+    visibility: visible;
+}
+.score{
+    padding: 12.5px;
+    font-size: x-large;
+    font-weight: bold;
+    background: rgba(243, 233, 123, 0.78);
+    color: #10643e;
+    border-radius: 15px;
+    display: none;
+}
+.play_field{
+    display: flex;
+    width: 100%;
+    /*border: 1px solid black;*/
+    flex-wrap: wrap;
+    /*background: url("Images/meadow.jpg") no-repeat center center;*/
+    background: #999999;
+    border-radius: 2px;
+}
+
+.line{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.wrap{
+    position: relative;
+    width: calc(100%/20);
+}
+.wrap::before{
+    content: "";
+    padding-top: 100%;
+    display: block;
+}
+.cell{
+    position: absolute;
+    border: 1px solid #10643e;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.3);
+}
+.snake_body{
+    background: #f6943e;
+}
+.snake_head_right{
+    background: linear-gradient(0.75turn, #000, #f6943e);
+    border-radius: 0px 15px 15px 0px;
+}
+.snake_head_left{
+    background: linear-gradient(0.25turn, #000, #f6943e);
+    border-radius: 15px 0px 0px 15px;
+}
+.snake_head_up{
+    background: linear-gradient(0.50turn, #000, #f6943e);
+    border-radius: 15px 15px 0px 0px;
+}
+.snake_head_down{
+    background: linear-gradient(0.95turn, #000, #f6943e);
+    border-radius: 0px 0px 15px 15px;
+}
+.snake_end{
+    background: linear-gradient(0.75turn, #f6943e, #fff);
+}
+.prey{
+    background-image: url("Images/frog.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    /*border: 2px solid #6f42c1;*/
+}
+.game_over{
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    border: 1px solid black;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    padding-top: 3%;
+    background: white;
+    opacity: 100%;
+    margin-top: 10%;
+    margin-left: 10%;
+    visibility: hidden;
+}
