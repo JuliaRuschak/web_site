@@ -183,7 +183,6 @@ li:hover::before{
 }
 .link_carousel{
     width: calc(100%/3);
-    /*height: 100%;*/
     cursor: pointer;
     margin-left: 10px;
 }
@@ -192,4 +191,15 @@ li:hover::before{
 }
 .link_carousel img:first-child{
     margin-left: 0;
+}
+.chess:after{
+    content: "Courtesy of Michael";
+    font-size: small;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    visibility: hidden;
+}
+.chess:hover:after{
+    visibility: visible;
 }
