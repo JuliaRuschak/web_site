@@ -22,7 +22,7 @@ let carousel_icons = document.querySelectorAll(".pointer");
 let carousel_imgs = document.querySelectorAll(".carousel_img");
 let carousel_hrefs = document.querySelectorAll(".link_carousel_js");
 let imgCount = 1;
-let gamesArray = ["index", "Snake", "Tetris", "Minesweeper"];
+let gamesArray = ["Chess", "Snake", "Tetris", "Minesweeper"];
 console.log(carousel_icons);
 for (let i=0; i<carousel_icons.length; i++){
     carousel_icons[i].onclick = carousel;
@@ -33,29 +33,41 @@ function carousel(event){
         if (imgCount>gamesArray.length){
             imgCount=1;
         }
-            imgCount++;
-            let imgNumber = imgCount;
-            for (let i=0; i<carousel_imgs.length; i++){
-                if(imgNumber>gamesArray.length){
-                    imgNumber=1;
-                }
-                carousel_imgs[i].src = "Images/"+ imgNumber + ".jpg";
-                carousel_hrefs[i].href = "Games/" + gamesArray[imgNumber-1] + "/index.html";
-                imgNumber++;
+        imgCount++;
+        let imgNumber = imgCount;
+        for (let i=0; i<carousel_imgs.length; i++){
+            if(imgNumber>gamesArray.length){
+                imgNumber=1;
             }
+            carousel_imgs[i].src = "Images/"+ imgNumber + ".jpg";
+            carousel_hrefs[i].href = "Games/" + gamesArray[imgNumber-1] + "/index.html";
+            if (gamesArray[imgNumber-1]==="Chess"){
+                carousel_hrefs[i].target = "_blanc";
+            }
+            else{
+                carousel_hrefs[i].target = "";
+            }
+            imgNumber++;
         }
+    }
     if(event.target.dataset.type === "left"){
         imgCount--;
         if(imgCount===0){
             imgCount=carousel_imgs.length;
         }
-        let imgNumber = imgCount;
+        let imgNumber = imgCount+1;
         for (let i=0; i<carousel_imgs.length; i++){
             if (imgNumber>gamesArray.length){
                 imgNumber=1;
             }
             carousel_imgs[i].src = "Images/" + imgNumber + ".jpg";
             carousel_hrefs[i].href = "Games/" + gamesArray[imgNumber-1] + "/index.html";
+            if (gamesArray[imgNumber-1] === "Chess"){
+                carousel_hrefs[i].target = "_blanc";
+            }
+            else{
+                carousel_hrefs[i].target = "";
+            }
             imgNumber++;
         }
     }
